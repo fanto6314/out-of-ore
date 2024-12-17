@@ -12,24 +12,18 @@ export default function News() {
   const width = useWindowWidth();
 
   useEffect(() => {
-    fetch('/api/getNews')
-      .then(res => res.json())
-      .then(data => {
-        const sortedNews = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+    fetch("/api/getNews")
+      .then((res) => res.json())
+      .then((data) => {
         setNews(data);
-        setLastNews(sortedNews[0]);
+        setLastNews(data[0]);
       })
-      .catch(err => console.error(err));
-  }, []);
+      .catch((err) => console.error(err));
+  }, []);  
 
-  const parseDate = (dateString) => {
-    const [day, month, year] = dateString.split("/");
-    return new Date(year, month - 1, day); // Use proper Date constructor with month as 0-indexed
-  };
-
-  const calculateDaysAgo = (dateString) => {
+  const calculateDaysAgo = (isoDate) => {
     const today = new Date();
-    const parsedDate = parseDate(dateString);
+    const parsedDate = new Date(isoDate);
   
     if (
       parsedDate.getDate() === today.getDate() &&
@@ -39,7 +33,6 @@ export default function News() {
       return "Today";
     }
   
-    // Otherwise, calculate the number of days ago
     const diffTime = today - parsedDate;
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
     return `${diffDays} Days ago`;
