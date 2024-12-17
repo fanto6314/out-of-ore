@@ -1,0 +1,68 @@
+.dark-bar-pattern {
+  background-color: #2a2a2a;
+  height: 53px;
+  mask-image: url(/images/bar-dark.svg);
+  mask-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dark-bar-pattern-2 {
+  background-color: #111111;
+  height: 53px;
+  mask-image: url(/images/bar-dark.svg);
+  mask-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dark-bar-pattern-3 {
+  background-color: #1a1a1a;
+  height: 53px;
+  mask-image: url(/images/bar-dark.svg);
+  mask-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dark-bar-pattern.bottom {
+  bottom: -20px;
+  top: auto;
+}
+
+.dark-bar-pattern.flip {
+  transform: rotate(180deg);
+}
+
+.dark-bar-pattern-2.bottom {
+  bottom: -20px;
+  top: auto;
+}
+
+.dark-bar-pattern-2.flip {
+  transform: rotate(180deg);
+}
+
+.dark-bar-pattern-3.bottom {
+  bottom: -20px;
+  top: auto;
+}
+
+.dark-bar-pattern-3.flip {
+  transform: rotate(180deg);
+}
