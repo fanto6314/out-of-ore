@@ -1,5 +1,10 @@
 import { withNextVideo } from "next-video/process";
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+const nextConfig = {
+  images: {
+    domains: ["clan.cloudflare.steamstatic.com"],
+  },
+};
 
 export default withNextVideo(nextConfig);
+
