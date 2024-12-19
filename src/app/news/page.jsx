@@ -1,5 +1,5 @@
-import NewsHero from "@/components/NewsHero";
-import NewsList from "@/components/NewsList";
+import NewsHero from "../../components/NewsHero";
+import NewsList from "../../components/NewsList";
 
 export default function NewsPage() {
   return (
