@@ -34,7 +34,7 @@ export default function NewsHero() {
       const scrollPosition = window.scrollY;
       const opacity = Math.min(1, scrollPosition / 400);
 
-      frontBlack.style.backgroundColor = `rgba(12, 12, 12, ${0.6 + opacity * 0.4})`;
+      frontBlack.style.backgroundColor = `rgba(21, 21, 21, ${0.6 + opacity * 0.4})`;
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -50,10 +50,9 @@ export default function NewsHero() {
   }
 
   const latestNews = newsItems[0];
-  console.log(latestNews)
 
   return (
-    <section className="relative w-full h-[80vh]">
+    <section className="relative w-full h-[85vh]">
       <Image className="absolute top-0 left-0 w-full h-full -mt-9 object-cover" src={latestNews.thumbnail} alt={latestNews.title} fill sizes="100vw" style={{objectFit: 'cover'}} />
 
       <div className="relative w-full h-full">
@@ -90,11 +89,11 @@ export default function NewsHero() {
       ></div>
 
       <div className="absolute bottom-0 w-full">
-          <div className="relative text-center z-10 py-12 bg-[#2a2a2a]" id="shape">
-            <div className="dark-bar-pattern"></div>
-            <div className="dark-bar-pattern bottom flip"></div>
-          </div>
+        <div className="relative text-center z-10 py-12 bg-[#0c0c0c]" id="shape">
+          <div className="dark-bar-pattern-4"></div>
+          <div className="dark-bar-pattern-4 bottom flip"></div>
         </div>
+      </div>
     </section>
   );
 }
