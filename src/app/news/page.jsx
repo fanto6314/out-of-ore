@@ -1,7 +1,18 @@
+import { Suspense } from "react";
+import NewsHero from "../../components/NewsHero";
+import NewsList from "../../components/NewsList";
+
 export default function NewsPage() {
   return (
-    <div>
-      <h1>News List</h1>
-    </div>
+    <>
+      <section className="relative h-full bg-[#0c0c0c]">
+        <NewsHero />
+      </section>
+      <section className="w-full bg-[#0c0c0c] z-10 h-full">
+        <Suspense fallback={<div>Loading...</div>}>
+          <NewsList />
+        </Suspense>
+      </section>
+    </>
   );
 }
