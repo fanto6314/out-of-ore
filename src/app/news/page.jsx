@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import NewsHero from "../../components/NewsHero";
 import NewsList from "../../components/NewsList";
 
@@ -8,7 +9,9 @@ export default function NewsPage() {
         <NewsHero />
       </section>
       <section className="w-full bg-[#0c0c0c] z-10 h-full">
-        <NewsList />
+        <Suspense fallback={<div>Loading...</div>}>
+          <NewsList />
+        </Suspense>
       </section>
     </>
   );
